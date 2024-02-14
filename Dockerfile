@@ -1,5 +1,5 @@
 FROM alpine as builder
-RUN apk add git && git clone https://github.com/gscatto/shackup.git /shackup
+RUN apk add git && git clone --depth 1 --branch 1.0.0 https://github.com/gscatto/shackup.git /shackup
 
 FROM debian:12.4
 RUN apt-get update && \
